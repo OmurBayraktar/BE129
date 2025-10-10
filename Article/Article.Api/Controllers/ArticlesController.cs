@@ -46,6 +46,47 @@ namespace Article.Api.Controllers
             return Results.Created($"/api/articles/{item.Id}", item);
         }
 
+        [HttpPut("{id}")]
+        [Consumes("application/json")]
+        public IResult PutItem(int id, string title, string content)
+        {
+            var index = articles.FindIndex(x => x.Id == id);
+
+            if (index == -1)
+            {
+                return Results.NotFound();
+            }
+
+            if (title == null)
+            {
+                return Results.BadRequest("Title boş bırakılamaz!");
+            }
+
+            articles[index].Title = title;
+            articles[index].Content = content;
+
+            return Results.Ok("Makale güncellendi");
+        }
+
+        [HttpDelete("{id}")]
+        public IResult DeleteItem(int id)
+        {
+            var index = articles.FindIndex(x => x.Id == id);
+
+            if (index == -1)
+            {
+                return Results.NotFound();
+            }
+
+            if (id == null)
+            {
+                return Results.NoContent();
+            }
+
+            articles.RemoveAt(index);
+
+            return Results.Ok("Makale silindi");
+        }
 
     }
 }
