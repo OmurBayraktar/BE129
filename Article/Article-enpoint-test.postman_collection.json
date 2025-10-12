@@ -1,0 +1,121 @@
+{
+  "info": {
+    "_postman_id": "296bf9ba-22a3-4b3b-b58e-f982b19b8b5f",
+    "name": "Article-enpoint-test",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49114803",
+    "_collection_link": "https://omurbayraktar-1038668.postman.co/workspace/%C3%96m%C3%BCr-Bayraktar's-Workspace~b1146333-6e6b-4d85-89fe-0d7c18daaaba/collection/49114803-296bf9ba-22a3-4b3b-b58e-f982b19b8b5f?action=share&source=collection_link&creator=49114803"
+  },
+  "item": [
+    {
+      "name": "/api/Articles",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7156/api/Articles",
+          "protocol": "https",
+          "host": ["localhost"],
+          "port": "7156",
+          "path": ["api", "Articles"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/api/Articles/1",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7156/api/Articles/1",
+          "protocol": "https",
+          "host": ["localhost"],
+          "port": "7156",
+          "path": ["api", "Articles", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/api/Articles?title=&content=",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7156/api/Articles?title=&content=",
+          "protocol": "https",
+          "host": ["localhost"],
+          "port": "7156",
+          "path": ["api", "Articles"],
+          "query": [
+            {
+              "key": "title",
+              "value": ""
+            },
+            {
+              "key": "content",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "https://localhost:7156/api/Articles/1?title=&content=",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7156/api/Articles/1?title=&content=",
+          "protocol": "https",
+          "host": ["localhost"],
+          "port": "7156",
+          "path": ["api", "Articles", "1"],
+          "query": [
+            {
+              "key": "title",
+              "value": ""
+            },
+            {
+              "key": "content",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/api/Articles/1",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7156/api/Articles/1",
+          "protocol": "https",
+          "host": ["localhost"],
+          "port": "7156",
+          "path": ["api", "Articles", "1"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
