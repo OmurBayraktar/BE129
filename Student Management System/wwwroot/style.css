@@ -15,10 +15,11 @@ body {
 
 .container {
   display: flex;
-  flex-direction: column;
-  width: 280px;
-  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   min-height: 380px;
+  border: 1px solid #000;
 }
 
 .registration-container,
@@ -39,7 +40,7 @@ body {
 .registration-container h3 {
   margin-bottom: 25px;
   color: #000;
-  font-size: 2em;
+  font-size: 2.1em;
   text-align: center;
 }
 
@@ -113,4 +114,46 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  border: none;
+  height: 100%;
+
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: #303f9f;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #0f2182;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
 }
